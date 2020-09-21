@@ -17,7 +17,7 @@ func mapSlice(f func(a int) int, slice []int) {
 }
 
 func mapArray(f func(a int) int, array [3]int) {
-	
+
 }
 
 func main() {
