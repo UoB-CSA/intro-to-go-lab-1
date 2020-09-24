@@ -1,4 +1,4 @@
-# Lab 1: Imperative Programming in Go
+# Intro to Go Lab 1: Imperative Programming
 
 > If you're stuck look at examples on [Go by Example](https://gobyexample.com/)
 
@@ -16,7 +16,7 @@
 
 Below is a complete 'Hello World' program written in Go:
 
-```go
+``` go
 package main
 
 import "fmt"
@@ -26,6 +26,7 @@ func main() {
 }
 ```
 
+
 ### Question 1a
 
 Type the above program into a new file `hello.go` (don't just copy and paste). To run your code you can either use `go run hello.go` or `go build hello.go` followed by `./hello`. Verify that Hello World is printed in both cases.
@@ -34,11 +35,7 @@ Type the above program into a new file `hello.go` (don't just copy and paste). T
 
 Modify `hello.go` so that it uses a for loop to print Hello World 20 times.
 
-## Question 2 - Fizz Buzz
-
-Write a program that prints the numbers from 1 to 100. But for multiples of 3 print `Fizz` instead of the number and for the multiples of 5 print `Buzz`. For numbers which are multiples of both 3 and 5 print `FizzBuzz`.
-
-## Question 3 - Quiz
+## Question 2 - Quiz
 
 Open `quiz.go`. It's a skeleton for a quiz program. Write a `main()` using the provided helper functions so that your program asks the 6 questions from `quiz-questions.csv` and prints out the final score at the end.
 
@@ -56,17 +53,17 @@ Use a [for-range loop](https://gobyexample.com/range) to ask all the questions.
 
 </details>
 
-## Question 4 - Arrays vs Slices
+## Question 3 - Arrays vs Slices
 
 Open `sequences.go`.
 
-### Question 4a
+### Question 3a
 
 Implement `mapSlice` and `mapArray` using [for-range loops](https://gobyexample.com/range).
 
 They are the same as Haskell's map. For example mapping `addOne` onto `[5, 10, 15]` should return `[6, 11, 16]`.
 
-### Question 4b
+### Question 3b
 
 In `main()`:
 
@@ -87,11 +84,11 @@ How are slices different from arrays? What exactly are they?
 
 </details>
 
-### Question 4c
+### Question 3c
 
 Change the definitions of `intsArray` and `intsSlice` so that they both contain values `[1, 2, 3, 4, 5]`. Without modifying `mapSlice` or `mapArray` run your new program. Explain the result.
 
-### Question 4d
+### Question 3d
 
 Slices support a “slice” operator with the syntax `slice[lowIndex:highIndex]`. It allows you to cut out a portion of your slice. For example:
 
@@ -103,17 +100,46 @@ newSlice := intsSlice[1:3]
 
 Define `newSlice` as shown above, map `square` onto `newSlice` and print both `newSlice` and the original `intSlice`. Explain the result.
 
-### Question 4e
+### Question 3e
 
 The function `double` should append a slice onto itself. For example, given `[5, 6, 7]` it should return `[5, 6, 7, 5, 6, 7]`. In `main`, try doubling and then printing your `intsSlice`. Explain the result. Modify the skeleton to solve any issues that you may have observed.
 
-### Question 4f
+### Question 3f
 
 Given the differences that you found between arrays and slices:
 
 - Explain how arrays and slices are passed to functions.
 - Explain how `append()` works.
 - Give use cases for arrays and slices.
+
+## Question 4 - Game of Life
+
+Time to test what you've learnt! 
+
+Open `gol.go`. This is a skeleton for a program that can run a serial game of life simulation.
+
+### What is Game of Life?
+
+The British mathematician John Horton Conway devised a cellular automaton named ‘The Game of Life’. The game resides on a 2-valued 2D matrix, i.e. a binary image, where the cells can either be ‘alive’ (pixel value 255 - white) or ‘dead’ (pixel value 0 - black). The game evolution is determined by its initial state and requires no further input. Every cell interacts with its eight neighbour pixels: cells that are horizontally, vertically, or diagonally adjacent. At each matrix update in time the following transitions may occur to create the next evolution of the domain:
+
+- any live cell with fewer than two live neighbours dies
+- any live cell with two or three live neighbours is unaffected
+- any live cell with more than three live neighbours dies
+- any dead cell with exactly three live neighbours becomes alive
+
+Consider the image to be on a closed domain (pixels on the top row are connected to pixels at the bottom row, pixels on the right are connected to pixels on the left and vice versa). A user can only interact with the Game of Life by creating an initial configuration and observing how it evolves. Note that evolving such complex, deterministic systems is an important application of scientific computing, often making use of parallel architectures and concurrent programs running on large computing farms.
+
+### Question 4a
+
+Complete the `calculateNextState(p golParams, world [][]byte) [][]byte` function. This function takes the current state of the world and completes one evolution of the world. It then returns the result.
+
+### Question 4b
+
+Complete the `calculateAliveCells(p golParams, world [][] byte) []cell` function. This function takes the world as input and returns the (x, y) coordinates of all the cells that are alive.
+
+Make sure that all your tests pass! (`go test .`)
+
+Once all your tests pass you can use `go run .` and see if you get the hidden message when you open `output.pgm`.
 
 ## Question 5 - Concurrent Hello World
 
@@ -155,14 +181,3 @@ Soon you'll see how to fix this problem with channels.
 
 </details>
 
---------------------------------------------------------------------
-
-## **EXTRA**
-
-## **OPTIONAL** Question 6 - Chess
-
-```diff
-- This question will help you practice Imperative Programming in Go but it doesn't directly contribute to the coursework!
-```
-
-Open `chess.go`. Given the position of two knights on an 8x8 chessboard, determine if they can attack each other or not. There are a few tests provided in `chess_test.go`. You can run them using `go test`.
