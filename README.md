@@ -16,7 +16,7 @@
 
 Below is a complete 'Hello World' program written in Go:
 
-```go
+``` go
 package main
 
 import "fmt"
@@ -25,6 +25,7 @@ func main() {
     fmt.Println("Hello World")
 }
 ```
+
 
 ### Question 1a
 
@@ -115,9 +116,8 @@ Given the differences that you found between arrays and slices:
 
 Time to test what you've learnt! 
 
-Open `gol.go`. This is a skeleton for a program that can run a game of life simulation. It contains everything you need to implement a serial game of life, it is missing a complete `round(current [][]byte, size Size) [][]byte` function. The purpose of this function is to complete one round of game of life. It has two arguments: `current` this is the current state of the grid; `size` this is a struct with two properties `height` and `width` of `current` and `next`. It should return a 2D-slice containing the new grid.
+Open `gol.go`. This is a skeleton for a program that can run a serial game of life simulation.
 
-TODO: Skeleton, is a serial GoL, reads in PGM and calls round function number of times needed to make the image change to wink face. Use SDL but set that up so it just happens each round? At the end output the file to a pgm.
 
 ### What is Game of Life?
 
@@ -131,9 +131,19 @@ The British mathematician John Horton Conway devised a cellular automaton named 
 Consider the image to be on a closed domain (pixels on the top row are connected to pixels at the bottom row, pixels on the right are connected to pixels on the left and vice versa). A user can only interact with the Game of Life by creating an initial configuration and observing how it evolves. Note that evolving such complex, deterministic systems is an important application of scientific computing, often making use of parallel architectures and concurrent programs running on large computing farms.
 
 
-### Task
+### Question 4a
 
-Complete the `round` function so that it can complete a single round of game of life. 
+Complete the `calculateNextState(p golParams, world [][]byte) [][]byte` function. This function takes the current state of the world and completes one evolution of the world. It then returns the result.
+
+
+### Question 4b
+
+Complete the `calculateAliveCells(p golParams, world [][] byte) []cell` function. This function takes the world as input and returns the (x, y) coordinates of all the cells that are alive.
+
+Make sure that all your tests pass! (`go test .`)
+
+Once all your tests pass you can use `go run . -t 300 -h 256 -w 256 -i images/secret.pgm -o output.pgm` and see if you get the hidden message when you open `output.pgm`.
+
 
 ## Question 5 - Concurrent Hello World
 
