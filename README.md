@@ -118,7 +118,6 @@ Time to test what you've learnt!
 
 Open `gol.go`. This is a skeleton for a program that can run a serial game of life simulation.
 
-
 ### What is Game of Life?
 
 The British mathematician John Horton Conway devised a cellular automaton named ‘The Game of Life’. The game resides on a 2-valued 2D matrix, i.e. a binary image, where the cells can either be ‘alive’ (pixel value 255 - white) or ‘dead’ (pixel value 0 - black). The game evolution is determined by its initial state and requires no further input. Every cell interacts with its eight neighbour pixels: cells that are horizontally, vertically, or diagonally adjacent. At each matrix update in time the following transitions may occur to create the next evolution of the domain:
@@ -130,11 +129,9 @@ The British mathematician John Horton Conway devised a cellular automaton named 
 
 Consider the image to be on a closed domain (pixels on the top row are connected to pixels at the bottom row, pixels on the right are connected to pixels on the left and vice versa). A user can only interact with the Game of Life by creating an initial configuration and observing how it evolves. Note that evolving such complex, deterministic systems is an important application of scientific computing, often making use of parallel architectures and concurrent programs running on large computing farms.
 
-
 ### Question 4a
 
 Complete the `calculateNextState(p golParams, world [][]byte) [][]byte` function. This function takes the current state of the world and completes one evolution of the world. It then returns the result.
-
 
 ### Question 4b
 
@@ -142,8 +139,7 @@ Complete the `calculateAliveCells(p golParams, world [][] byte) []cell` function
 
 Make sure that all your tests pass! (`go test .`)
 
-Once all your tests pass you can use `go run . -t 300 -h 256 -w 256 -i images/secret.pgm -o output.pgm` and see if you get the hidden message when you open `output.pgm`.
-
+Once all your tests pass you can use `go run .` and see if you get the hidden message when you open `output.pgm`.
 
 ## Question 5 - Concurrent Hello World
 
