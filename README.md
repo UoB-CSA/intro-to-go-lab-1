@@ -4,13 +4,18 @@
 
 ## Setting up Go
 
-**Before starting this lab**, make sure that your machine has Go correctly installed and your favourite editor/IDE properly configured. Go is supported by Linux, macOS and Windows. However, Lab 4 and the coursework use shell scripts and Makefiles so please avoid using Windows.
+**Before starting this lab**, make sure that your machine has Go correctly installed and your favourite editor/IDE properly configured. Go is supported by Linux, macOS and Windows. 
 
 **If you're using the 2.11 lab machines** we wrote a quick setup guide for configuring Go and VS Code.
 
-**If you're using your own machine** we prepared a series of videos to help you get started.
+You can find all [setup guides here](https://github.com/UoB-CSA/setup-guides).
 
-*You'll find all guides, videos and transcripts on the Unit Page on Blackboard.*
+## Using the lab sheet
+
+There are two ways to use the lab sheet, you can either:
+
+- [create a new repo from this template](https://github.com/UoB-CSA/intro-to-go-lab-1/generate) - **this is the recommended way**
+- download a [zip file](https://github.com/UoB-CSA/intro-to-go-lab-1/archive/master.zip)
 
 ## Question 1 - Hello World
 
