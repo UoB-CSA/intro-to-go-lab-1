@@ -17,7 +17,15 @@ There are two ways to use the lab sheet, you can either:
 - [create a new repo from this template](https://github.com/UoB-CSA/intro-to-go-lab-1/generate) - **this is the recommended way**
 - download a [zip file](https://github.com/UoB-CSA/intro-to-go-lab-1/archive/master.zip)
 
-## Question 1 - Hello World
+Each question is rated to help you balance your work:
+
+- :red_circle::white_circle::white_circle::white_circle::white_circle: - Easy, strictly necessary.
+- :red_circle::red_circle::white_circle::white_circle::white_circle: - Medium, still necessary.
+- :red_circle::red_circle::red_circle::white_circle::white_circle: - Hard, necessary if you're aiming for higher marks.
+- :red_circle::red_circle::red_circle::red_circle::white_circle: - Hard, useful for coursework extensions.
+- :red_circle::red_circle::red_circle::red_circle::red_circle: - Hard, beyond what you need for any part of the coursework.
+
+## Question 1 - Hello World :red_circle::white_circle::white_circle::white_circle::white_circle:
 
 Below is a complete 'Hello World' program written in Go:
 
@@ -40,7 +48,7 @@ Type the above program into a new file `hello.go` (don't just copy and paste). T
 
 Modify `hello.go` so that it uses a for loop to print Hello World 20 times.
 
-## Question 2 - Quiz
+## Question 2 - Quiz :red_circle::white_circle::white_circle::white_circle::white_circle:
 
 Open `quiz.go`. It's a skeleton for a quiz program. Write a `main()` using the provided helper functions so that your program asks the 6 questions from `quiz-questions.csv` and prints out the final score at the end.
 
@@ -58,7 +66,7 @@ Use a [for-range loop](https://gobyexample.com/range) to ask all the questions.
 
 </details>
 
-## Question 3 - Arrays vs Slices
+## Question 3 - Arrays vs Slices :red_circle::red_circle::white_circle::white_circle::white_circle:
 
 Open `sequences.go`.
 
@@ -117,7 +125,7 @@ Given the differences that you found between arrays and slices:
 - Explain how `append()` works.
 - Give use cases for arrays and slices.
 
-## Question 4 - Game of Life
+## Question 4 - Game of Life :red_circle::red_circle::white_circle::white_circle::white_circle:
 
 Time to test what you've learnt! 
 
@@ -146,7 +154,7 @@ Make sure that all your tests pass! (`go test .`)
 
 Once all your tests pass you can use `go run .` and see if you get the hidden message when you open `output.pgm`.
 
-## Question 5 - Concurrent Hello World
+## Question 5 - Concurrent Hello World :red_circle::white_circle::white_circle::white_circle::white_circle:
 
 A goroutine is a lightweight thread of execution. Modify your `hello.go` so that it uses a for loop to start 5 goroutines and print `Hello from goroutine i` where `i` is the number of the goroutine.
 
