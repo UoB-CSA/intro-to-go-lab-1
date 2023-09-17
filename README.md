@@ -6,7 +6,7 @@
 
 **Before starting this lab**, make sure that your machine has Go correctly installed and your favourite editor/IDE properly configured. Go is supported by Linux, macOS and Windows. 
 
-**If you're using the 2.11 lab machines** we wrote a quick setup guide for configuring Go and VS Code.
+**If you're using the 2.11 lab machines** use IntelliJ Ultimate - you'll need to install the Go plugin
 
 You can find all [setup guides here](https://github.com/UoB-CSA/setup-guides).
 
