@@ -129,6 +129,8 @@ Given the differences that you found between arrays and slices:
 
 Time to test what you've learnt! 
 
+[Sion's C implementation](https://seis.bristol.ac.uk/~sh1670/life.c)
+
 Open `gol.go`. This is a skeleton for a program that can run a serial game of life simulation.
 
 ### What is Game of Life?
