@@ -142,7 +142,7 @@ The British mathematician John Horton Conway devised a cellular automaton named 
 - any live cell with more than three live neighbours dies
 - any dead cell with exactly three live neighbours becomes alive
 
-Consider the image to be on a closed domain (pixels on the top row are connected to pixels at the bottom row, pixels on the right are connected to pixels on the left and vice versa). A user can only interact with the Game of Life by creating an initial configuration and observing how it evolves. Note that evolving such complex, deterministic systems is an important application of scientific computing, often making use of parallel architectures and concurrent programs running on large computing farms.
+Consider the image to be on a closed domain (pixels on the top row are connected to pixels at the bottom row, pixels on the right are connected to pixels on the left and vice versa). See [this visualisation](https://uob-csa.github.io/website/vis/week1/GoLBoundaries.html) to understand how modular arithmetic helps with the closed domain. A user can only interact with the Game of Life by creating an initial configuration and observing how it evolves. Note that evolving such complex, deterministic systems is an important application of scientific computing, often making use of parallel architectures and concurrent programs running on large computing farms.
 
 ### Question 4a
 
